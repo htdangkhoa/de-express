@@ -1,8 +1,8 @@
 {
   "name": "de-express",
   "description": "de-express is a simple way to use express with ES6 decorators.",
-  "version": "0.0.1",
-  "main": "dist/index.js",
+  "version": "1.0.0",
+  "main": "index.js",
   "license": "GPL-3.0",
   "author": "htdangkhoa <huynhtran.dangkhoa@gmail.com> (https://github.com/htdangkhoa)",
   "contributors": [
@@ -20,13 +20,20 @@
     "express",
     "es6",
     "decorators",
-    "annotations"
+    "annotations",
+    "rest",
+    "restful",
+    "app",
+    "api"
   ],
   "scripts": {
     "build": "BABEL_ENV=production babel --minified --no-comments lib -d dist",
     "prebuild": "rimraf dist",
     "example": "babel-node example/index.js",
-    "test": "mocha --timeout=10000 --exit -r should -r @babel/register tests/*.test.js"
+    "test": "mocha --timeout=10000 --exit -r should -r @babel/register tests/*.test.js",
+    "pretest": "npm run build",
+    "prepublishOnly": "npm run build && cp -r ./dist/* . && rm -rf ./dist",
+    "postpublish": "git clean -fd"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
