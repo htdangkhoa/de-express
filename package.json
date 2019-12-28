@@ -1,0 +1,42 @@
+{
+  "name": "de-express",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "GPL-3.0",
+  "scripts": {
+    "build": "BABEL_ENV=production babel --minified --no-comments lib -d dist",
+    "prebuild": "rimraf dist",
+    "example": "babel-node example/index.js",
+    "test": "mocha --timeout=10000 --exit -r should -r @babel/register tests/*.test.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.8.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "helmet": "^3.21.2",
+    "mocha": "^6.2.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2",
+    "swig-templates": "^2.0.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "express": "^4.17.1",
+    "lodash.compact": "^3.0.1",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isequal": "^4.5.0",
+    "reflect-metadata": "^0.1.13"
+  }
+}
