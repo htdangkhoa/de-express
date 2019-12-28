@@ -1,8 +1,27 @@
 {
   "name": "de-express",
-  "version": "1.0.0",
+  "description": "de-express is a simple way to use express with ES6 decorators.",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "license": "GPL-3.0",
+  "author": "htdangkhoa <huynhtran.dangkhoa@gmail.com> (https://github.com/htdangkhoa)",
+  "contributors": [
+    "huynhtran.dangkhoa@gmail.com"
+  ],
+  "homepage": "https://github.com/htdangkhoa/de-express",
+  "bugs": {
+    "url": "https://github.com/htdangkhoa/de-express/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/htdangkhoa/de-express.git"
+  },
+  "keywords": [
+    "express",
+    "es6",
+    "decorators",
+    "annotations"
+  ],
   "scripts": {
     "build": "BABEL_ENV=production babel --minified --no-comments lib -d dist",
     "prebuild": "rimraf dist",
