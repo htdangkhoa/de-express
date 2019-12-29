@@ -1,4 +1,4 @@
-# de-express
+# de-express [![dependencies Status](https://david-dm.org/htdangkhoa/de-express/status.svg)](https://david-dm.org/htdangkhoa/de-express) [![devDependencies Status](https://david-dm.org/htdangkhoa/de-express/dev-status.svg)](https://david-dm.org/htdangkhoa/de-express?type=dev) [![build](https://github.com/htdangkhoa/de-express/workflows/build/badge.svg?branch=develop)](https://github.com/htdangkhoa/de-express/actions) [![license](https://img.shields.io/github/license/htdangkhoa/de-express)](https://github.com/htdangkhoa/de-express/blob/master/LICENSE)
 
 > `de-express` is a simple way to use [express](http://expressjs.com/) with ES6 decorators.
 
