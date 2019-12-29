@@ -30,6 +30,7 @@
     "build": "BABEL_ENV=production babel --minified --no-comments lib -d dist",
     "prebuild": "rimraf dist",
     "example": "babel-node example/index.js",
+    "preexample": "npm run build",
     "test": "mocha --timeout=10000 --exit -r should -r @babel/register tests/*.test.js",
     "pretest": "npm run build",
     "prepublishOnly": "npm run build && cp -r ./dist/* . && rm -rf ./dist",
