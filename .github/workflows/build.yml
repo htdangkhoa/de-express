@@ -1,0 +1,22 @@
+name: build
+on:
+  push:
+    branches:
+      - master
+      - develop
+      - release/*
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node.js for use with actions
+        uses: actions/setup-node@v1.1.0
+        with:
+          node-version: "10.x"
+      - run: yarn install
+      - run: yarn build
+        env:
+          BABEL_ENV: production
