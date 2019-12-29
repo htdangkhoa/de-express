@@ -1,7 +1,13 @@
 import supertest from 'supertest';
-import { app } from '../example';
+import { bootstrap } from '../example';
 
-const request = supertest(app);
+let request;
+
+before(async () => {
+  const app = await bootstrap();
+
+  request = supertest(app);
+});
 
 describe('GET /', () => {
   it('Should return object.', async () => {
