@@ -8,18 +8,21 @@ import AppModule from './modules/app.module';
 
 const port = process.env.PORT || 8080;
 
-const { app } = Factory.setViewEngine('html', swig.renderFile)
-  .setViewDir(resolve(process.cwd(), 'example/views'))
-  .applyMiddlewares(helmet())
-  .create(AppModule)
-  .applyMiddlewares(ServerError(), NotFoundError());
+export const bootstrap = async () => {
+  const instance = await Factory.setViewEngine('html', swig.renderFile)
+    .setViewDir(resolve(process.cwd(), 'example/views'))
+    .applyMiddlewares(helmet())
+    .create(AppModule);
 
-export { app };
+  const { app } = instance.applyMiddlewares(ServerError(), NotFoundError());
 
-const bootstrap = () => {
-  app.listen(port, () => {
-    console.log(`Server is serving on port ${port}...`);
-  });
+  return app;
 };
 
-bootstrap();
+(async () => {
+  const app = await bootstrap();
+
+  await app.listen(port);
+
+  console.log(`Server is serving on port ${port}...`);
+})();

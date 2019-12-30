@@ -36,6 +36,11 @@
     "prepublishOnly": "npm run build && cp -r ./dist/* . && rm -rf ./dist",
     "postpublish": "git clean -fd"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test"
+    }
+  },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
@@ -51,6 +56,7 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-prettier": "^3.1.2",
     "helmet": "^3.21.2",
+    "husky": "^3.1.0",
     "mocha": "^6.2.2",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
@@ -64,6 +70,7 @@
     "lodash.compact": "^3.0.1",
     "lodash.isarray": "^4.0.0",
     "lodash.isequal": "^4.5.0",
+    "lodash.last": "^3.0.0",
     "reflect-metadata": "^0.1.13"
   }
 }
