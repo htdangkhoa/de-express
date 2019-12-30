@@ -12,8 +12,8 @@ class InterceptorController {
 
   @Get('/transform')
   @Interceptors(
-    (data) => data, // Interceptor 1.
-    (data) => ({ oldData: data, newData: { ping: 'pong' } }), // Interceptor 2.
+    (req, data) => data, // Interceptor 1.
+    (req, data) => ({ oldData: data, newData: { ping: 'pong' } }), // Interceptor 2.
   )
   transformDataWithInterceptor() {
     return { foo: 'bar' };
