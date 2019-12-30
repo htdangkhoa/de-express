@@ -1,4 +1,4 @@
-import { Module, Hook } from '../../dist/decorator';
+import { Module, Hooks } from '../../dist/decorator';
 import GeneralController from '../controllers/general.controller';
 import ErrorController from '../controllers/error.controller';
 
@@ -7,6 +7,6 @@ const helloHook = () => {
 };
 
 export default
-@Hook(helloHook)
+@Hooks(helloHook)
 @Module(GeneralController, ErrorController)
 class AppModule {}
