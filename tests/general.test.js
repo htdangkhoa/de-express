@@ -10,7 +10,7 @@ before(async () => {
 });
 
 describe('GET /', () => {
-  it('Should return object.', async () => {
+  it(`Should return object with message is 'Hello world!!!'.`, async () => {
     const { body } = await request.get('/');
 
     body.message.should.equal('Hello world!!!');

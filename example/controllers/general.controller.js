@@ -1,17 +1,7 @@
-import { Get, Post, Render, Interceptors } from '../../dist/decorator';
+import { Get, Post, Render } from '../../dist/decorator';
 
 class GeneralController {
   @Get()
-  @Interceptors(
-    () =>
-      new Promise((resolve) =>
-        setTimeout(() => {
-          console.log('Test interceptor: Should show before send to client.');
-
-          return resolve();
-        }, 3000),
-      ),
-  )
   async greeting(req, res) {
     if (req.query.greeting) {
       return res
