@@ -37,7 +37,9 @@
     "postpublish": "git clean -fd"
   },
   "husky": {
-    "pre-push": "npm run test"
+    "hooks": {
+      "pre-push": "npm run test"
+    }
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
