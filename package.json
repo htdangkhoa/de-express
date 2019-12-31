@@ -70,6 +70,7 @@
     "lodash.compact": "^3.0.1",
     "lodash.isequal": "^4.5.0",
     "lodash.last": "^3.0.0",
+    "multer": "^1.4.2",
     "reflect-metadata": "^0.1.13"
   }
 }
