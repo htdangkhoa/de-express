@@ -13,7 +13,11 @@ const middlewares = [
   },
 ];
 
-@Controller('/middlewares')
+@Controller('/middlewares', (req, res, next) => {
+  console.log('Controller middleware.');
+
+  return next();
+})
 class MiddlewareController {
   @All('/simple')
   @Middlewares(...middlewares)
