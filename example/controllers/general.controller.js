@@ -1,4 +1,4 @@
-import { Get, Post, Render } from '../../dist/decorator';
+import { Get, Render } from '../../dist/decorator';
 
 class GeneralController {
   @Get()

@@ -24,8 +24,7 @@ export const bootstrap = async () => {
   const instance = await Factory.setViewEngine('html', swig.renderFile)
     .setViewDir(resolve(process.cwd(), 'example/views'))
     .applyMiddlewares(helmet())
-    .create({
-      module: AppModule,
+    .create(AppModule, {
       multer: {
         storage,
         fileFilter: (req, file, next) => {
@@ -40,6 +39,7 @@ export const bootstrap = async () => {
           );
         },
       },
+      debug: true,
     });
 
   const { app } = instance.applyMiddlewares(ServerError(), NotFoundError());
