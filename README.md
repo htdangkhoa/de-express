@@ -14,7 +14,7 @@
   </a>
 
   <a href='https://github.com/htdangkhoa/de-express/actions'>
-    <img src='https://github.com/htdangkhoa/de-express/workflows/build/badge.svg?branch=develop' alt='build'/>
+    <img src='https://github.com/htdangkhoa/de-express/workflows/build/badge.svg' alt='build'/>
   </a>
 
   <a href='https://github.com/htdangkhoa/de-express/blob/master/LICENSE'>
