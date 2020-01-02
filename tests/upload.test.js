@@ -16,11 +16,9 @@ describe('POST /upload/single', () => {
   it(`Should return object with avatars is array.`, async () => {
     const { body } = await request
       .post('/upload/single')
-      .attach('avatars', imagePath);
+      .attach('avatar', imagePath);
 
-    body.avatars.should.be.Array();
-
-    body.avatars.length.should.equal(1);
+    body.avatar.should.be.Object();
   });
 });
 
@@ -41,10 +39,7 @@ describe('POST /upload/multiple-fields', () => {
   it(`Should return object with avatars is array.`, async () => {
     const { body } = await request
       .post('/upload/multiple-fields')
-      .attach('avatars', imagePath)
       .attach('images', imagePath);
-
-    body.files.avatars.should.be.Array();
 
     body.files.images.should.be.Array();
   });

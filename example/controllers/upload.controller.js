@@ -1,29 +1,33 @@
-import { Controller, Post, Multer } from '../../dist/decorator';
+import {
+  Controller,
+  Post,
+  UploadFile,
+  UploadFiles,
+  Multer,
+} from '../../dist/decorator';
 
 @Controller('/upload')
 class UploadController {
   @Post('/single')
-  @Multer({ name: 'avatars' })
+  @UploadFile('avatar')
   uploadSingle(req, _res) {
-    console.log(req.files.avatars.length);
+    console.log(req.file);
 
-    return { avatars: req.files.avatars };
+    return { avatar: req.file };
   }
 
   @Post('/multiple')
-  @Multer({ name: 'avatars', maxCount: 2 })
+  @UploadFiles('avatars', 2)
   uploadMultiple(req, _res) {
-    console.log(req.files.avatars.length);
+    console.log(req.files.length);
 
-    return { avatars: req.files.avatars };
+    return { avatars: req.files };
   }
 
   @Post('/multiple-fields')
-  @Multer({ name: 'avatars', maxCount: 1 }, { name: 'images', maxCount: 1 })
+  @Multer({ name: 'images', maxCount: 1 })
   uploadMultipleFields(req, _res) {
-    console.log(req.files.avatars);
-
-    console.log(req.files.images);
+    console.log(req.files);
 
     return { files: req.files };
   }
