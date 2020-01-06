@@ -61,7 +61,3 @@ $ yarn add de-express
 ## Usage
 
 Visit the [wiki](https://github.com/htdangkhoa/de-express/wiki).
-
-## Demo
-
-[![Edit de-express-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/de-express-example-yc1xf?fontsize=14&hidenavigation=1&theme=dark)

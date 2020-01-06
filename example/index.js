@@ -42,15 +42,15 @@ export const bootstrap = async () => {
       debug: true,
     });
 
-  const { app } = instance.applyMiddlewares(ServerError(), NotFoundError());
+  const { server } = instance.applyMiddlewares(ServerError(), NotFoundError());
 
-  return app;
+  return server;
 };
 
 (async () => {
-  const app = await bootstrap();
+  const server = await bootstrap();
 
-  await app.listen(port);
+  await server.listen(port);
 
   console.log(`Server is serving on port ${port}...`);
 })();

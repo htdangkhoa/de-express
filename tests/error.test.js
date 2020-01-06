@@ -4,9 +4,9 @@ import { bootstrap } from '../example';
 let request;
 
 before(async () => {
-  const app = await bootstrap();
+  const server = await bootstrap();
 
-  request = supertest(app);
+  request = supertest(server);
 });
 
 describe('GET /error', () => {

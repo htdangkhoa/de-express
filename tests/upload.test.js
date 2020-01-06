@@ -7,9 +7,9 @@ const imagePath = resolve(__dirname, 'assets/placeholder.png');
 let request;
 
 before(async () => {
-  const app = await bootstrap();
+  const server = await bootstrap();
 
-  request = supertest(app);
+  request = supertest(server);
 });
 
 describe('POST /upload/single', () => {
