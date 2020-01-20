@@ -11,11 +11,13 @@ const helloHook = () => {
 
 export default
 @Hooks(helloHook)
-@Module(
-  GeneralController,
-  ErrorController,
-  InterceptorController,
-  UploadController,
-  MiddlewareController,
-)
+@Module({
+  controllers: [
+    GeneralController,
+    ErrorController,
+    InterceptorController,
+    UploadController,
+    MiddlewareController,
+  ],
+})
 class AppModule {}

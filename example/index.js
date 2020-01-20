@@ -39,7 +39,7 @@ export const bootstrap = async () => {
           );
         },
       },
-      debug: true,
+      debug: false,
     });
 
   const { server } = instance.applyMiddlewares(ServerError(), NotFoundError());

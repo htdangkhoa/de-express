@@ -1,6 +1,12 @@
-import { Get, Render } from '../../dist/decorator';
+import { Get, Render, Dependencies } from '../../dist/decorator';
+import AppService from '../services/app.service';
 
+@Dependencies(AppService)
 class GeneralController {
+  constructor(appService) {
+    this.appService = appService;
+  }
+
   @Get()
   async greeting(req, res) {
     if (req.query.greeting) {
@@ -9,7 +15,7 @@ class GeneralController {
         .json({ message: `Hello ${req.query.greeting}!!!` });
     }
 
-    return { message: 'Hello world!!!' };
+    return this.appService.helloWorld();
   }
 
   @Get('/home')
