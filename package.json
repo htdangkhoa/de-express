@@ -4,6 +4,7 @@
   "version": "1.4.0",
   "main": "index.js",
   "license": "GPL-3.0",
+  "private": true,
   "author": "htdangkhoa <huynhtran.dangkhoa@gmail.com> (https://github.com/htdangkhoa)",
   "contributors": [
     "huynhtran.dangkhoa@gmail.com"
