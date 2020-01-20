@@ -3,8 +3,7 @@
   "description": "de-express is a simple way to use express with ES6 decorators.",
   "version": "1.4.0",
   "main": "index.js",
-  "license": "GPL-3.0",
-  "private": true,
+  "license": "GPL",
   "author": "htdangkhoa <huynhtran.dangkhoa@gmail.com> (https://github.com/htdangkhoa)",
   "contributors": [
     "huynhtran.dangkhoa@gmail.com"
