@@ -8,6 +8,7 @@
   <a href='https://david-dm.org/htdangkhoa/de-express?type=dev'>
     <img src='https://david-dm.org/htdangkhoa/de-express/dev-status.svg' alt='devDependencies Status'/>
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhtdangkhoa%2Fde-express?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhtdangkhoa%2Fde-express.svg?type=shield"/></a>
 
   <a href='https://github.com/prettier/prettier'>
     <img src='https://img.shields.io/badge/code_style-prettier-ff69b4.svg' alt='code style: prettier'/>
@@ -31,6 +32,9 @@
 ---
 
 > `de-express` is a simple way to use [express](http://expressjs.com/) with ES6 decorators.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhtdangkhoa%2Fde-express.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhtdangkhoa%2Fde-express?ref=badge_large)
 
 ## Install
 
