@@ -23,7 +23,14 @@ const storage = Multer.diskStorage({
 export const bootstrap = async () => {
   const instance = await Factory.setViewEngine('html', swig.renderFile)
     .setViewDir(resolve(process.cwd(), 'example/views'))
-    .applyMiddlewares(helmet())
+    .applyMiddlewares(helmet(), {
+      url: /^\/home/,
+      handler: (req, res, next) => {
+        console.log('test middleware as object.');
+
+        return next();
+      },
+    })
     .create(AppModule, {
       multer: {
         storage,
